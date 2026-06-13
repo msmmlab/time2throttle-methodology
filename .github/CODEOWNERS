@@ -1,0 +1,9 @@
+# CODEOWNERS — Time2Throttle Methodology Repository
+#
+# All changes to methodology documents require review by the maintainer.
+# This applies to every PR targeting main, including PRs from the maintainer.
+# Consistent with §8 rule 6: "This methodology changes only by public versioned
+# revision with changelog — never retroactively."
+
+*.mdx @msmmlab
+*.md  @msmmlab
