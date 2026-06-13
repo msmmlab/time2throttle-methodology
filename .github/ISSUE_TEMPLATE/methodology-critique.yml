@@ -1,0 +1,77 @@
+name: Methodology critique
+description: Report a flaw, gap, or improvement in the Time2Throttle test methodology
+title: "[Critique] "
+labels: ["methodology", "critique"]
+body:
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      description: Which section does this critique relate to?
+      options:
+        - "§1 Purpose"
+        - "§2 Scope & device tiers"
+        - "§3 Test environment"
+        - "§4 Instrumentation"
+        - "§5 Workload profiles"
+        - "§6 Metrics & definitions"
+        - "§7 Reporting & publication rules"
+        - "§8 Independence rules"
+        - "§9 Critique invited"
+        - "General / cross-section"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: version
+    attributes:
+      label: Methodology version
+      description: Which version are you critiquing?
+      options:
+        - "v0.2 (current)"
+        - "v0.1 (superseded)"
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is the problem or gap? Be specific.
+      placeholder: "Section X currently states... This is a problem because..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Proposed change
+      description: What should the methodology say instead? Exact wording preferred.
+      placeholder: "Replace / add / remove..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why does this matter for reproducibility, accuracy, or integrity?
+    validations:
+      required: true
+
+  - type: input
+    id: background
+    attributes:
+      label: Your background (optional)
+      description: e.g. "work on wearable thermals", "thermal measurement engineer", "independent researcher"
+      placeholder: Optional — used for changelog credit if the critique is accepted
+
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Acknowledgement
+      options:
+        - label: I understand that accepted corrections are credited in the methodology changelog
+          required: false
+        - label: I understand that Time2Throttle makes the final determination on whether a critique is accepted
+          required: true
