@@ -38,4 +38,4 @@ Fork this repository, make your proposed edit to the relevant `.mdx` file on a b
 
 ## Contact
 
-lab@time2throttle.com
+labt2t@mmlab.ie
