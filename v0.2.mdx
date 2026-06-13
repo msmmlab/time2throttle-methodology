@@ -4,7 +4,13 @@ date: "2026-06-13"
 status: "draft — open for critique"
 changelog:
   - "v0.1 — founding public draft (June 2026)."
-  - "v0.2 — six targeted revisions (June 2026): (1) humidity added as a controlled variable in §3, standard and stress ambient; (2) minimum run count raised from 2 to 3 in §3; (3) W1 network conditions specified (local network, ≥100 Mbps, ≤5 ms) in §5; (4) Recovery time redefined as a precise dual-condition endpoint in §6; (5) known limitation note added under Pipeline slice in §6 regarding non-linear power decomposition; (6) Black-box reproducibility limitation disclosed inline in §2."
+  - "v0.2 — six revisions (June 2026):"
+  - "  1. §3 humidity added as a controlled variable — standard ambient 50% ± 5% RH; stress ambient 50% ± 5% RH."
+  - "  2. §3 minimum run count raised from 2 to 3; language updated to reflect a true median now exists."
+  - "  3. §5 W1 network conditions specified — local network, minimum 100 Mbps available bandwidth, maximum 5 ms latency; note added that this removes network congestion as a variable."
+  - "  4. §6 Recovery Time redefined as a precise dual-condition endpoint: thermal status NONE per Android Thermal API and surface temperature below 37 °C at the hottest contact point; whichever condition occurs last is the recorded endpoint."
+  - "  5. §6 Pipeline Slice — known limitation note added: W0/W1/W3 decomposition assumes linear and independent component contributions; non-linear interactions (particularly throttling during W1 suppressing loads present in W0/W3) are acknowledged; to be revisited in a future version."
+  - "  6. §2 Black-box tier — reproducibility limitation disclosed inline: results cannot be fully reproduced by third parties due to absence of internal telemetry; limitation disclosed on every published black-box result."
 ---
 
 ## 1. Purpose
